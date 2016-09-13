@@ -11,6 +11,7 @@
 + Make comments on post
 + Delete comments from post
 + About us
++ strict mode
 
 
 ## Stretch

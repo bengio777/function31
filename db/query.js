@@ -17,7 +17,22 @@ function newPost(title, subtitle, author_id, body, can_comment) {
   })
 }
 
+function newComment(post_id, author_id, body, is_positive) {
+  return knex('comment').insert({
+    post_id: post_id,
+    author_id: author_id,
+    body: body,
+    is_positive: is_positive
+  })
+}
+
+function deleteComment(id) {
+  return knex('comment').where('id', id).del();
+}
+
 module.exports = {
   Posts,
-  newPost
+  newPost,
+  newComment,
+  deleteComment
 }

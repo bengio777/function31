@@ -11,5 +11,14 @@
           {{{post.body}}}
         </p>
       </div>
+      <p class="comment-body">
+        {{#each data}}
+        <div class="aComment" id="{{this.commentId}}">{{{this.commentBody}}}</div>
+        {{/each}}
+      </p>
+      <p class="comment-form">
+        {{{commentForm}}}
+      </p>
+
     </li>
 </ul>
